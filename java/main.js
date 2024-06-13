@@ -49,3 +49,27 @@ document.addEventListener('DOMContentLoaded', (event) => {
       counterValue.textContent = val;
   }
 });
+
+
+document.addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevent form submission
+
+    // Perform form validation
+    const name = form.elements['name'].value;
+    const email = form.elements['email'].value;
+    const message = form.elements['message'].value;
+
+    if (name.trim() === '' || email.trim() === '' || message.trim() === '') {
+        alert('Please fill in all fields.');
+    } else {
+        console.log('Form submitted successfully');
+    }
+});
+
+
+// 
+
+document.getElementById('contactUsSubmit').addEventListener('click', function() {
+  var inputValue = document.getElementById('Name').value;
+  console.log(inputValue);
+});
